@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://mailcow.github.io/mailcow-dockerized-docs/u_e-sogo/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#change-theme" class="md-skip">
+        <a href="#apply-custom-sogo-theme" class="md-skip">
           Skip to content
         </a>
       
@@ -320,6 +320,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../i_u_m_deinstall/" class="md-nav__link">
+        Deinstallation
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -475,8 +487,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../firststeps-rfc-1918/" class="md-nav__link">
-        Untrust RFC 1918
+      <a href="../firststeps-trust_networks/" class="md-nav__link">
+        Add trusted networks
       </a>
     </li>
   
@@ -669,6 +681,18 @@
     <li class="md-nav__item">
       <a href="../debug-admin_login_sogo/" class="md-nav__link">
         Admin login to SOGo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug-reset-tls/" class="md-nav__link">
+        Reset TLS certificates
       </a>
     </li>
   
@@ -1332,6 +1356,7 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+      
         <label class="md-nav__link md-nav__link--active" for="__toc">
           SOGo
           <span class="md-nav__icon md-icon"></span>
@@ -1346,6 +1371,7 @@
   
   
   
+  
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
@@ -1353,8 +1379,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#change-theme" class="md-nav__link">
-    Change theme
+  <a href="#apply-custom-sogo-theme" class="md-nav__link">
+    Apply custom SOGo theme
   </a>
   
 </li>
@@ -1535,30 +1561,6 @@
     <li class="md-nav__item">
       <a href="../u_e-80_to_443/" class="md-nav__link">
         Redirect HTTP to HTTPS
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../u_e-change_config/" class="md-nav__link">
-        Adjust Service Configurations
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../u_e-deinstall/" class="md-nav__link">
-        Deinstall
       </a>
     </li>
   
@@ -1773,6 +1775,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../third_party-borgmatic/" class="md-nav__link">
+        Borgmatic Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../third_party-exchange_onprem/" class="md-nav__link">
         Exchange Hybrid Setup
       </a>
@@ -1886,6 +1900,7 @@
   
   
   
+  
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
@@ -1893,8 +1908,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#change-theme" class="md-nav__link">
-    Change theme
+  <a href="#apply-custom-sogo-theme" class="md-nav__link">
+    Apply custom SOGo theme
   </a>
   
 </li>
@@ -1954,10 +1969,15 @@
                   <h1>SOGo</h1>
                 
                 <p>SOGo is used for accessing your mails via a webbrowser, adding and sharing your contacts or calendars. For a more in-depth documentation on SOGo please visit its <a href="http://wiki.sogo.nu/">own documentation</a>.</p>
-<h2 id="change-theme">Change theme<a class="headerlink" href="#change-theme" title="Permanent link">&para;</a></h2>
+<h2 id="apply-custom-sogo-theme">Apply custom SOGo theme<a class="headerlink" href="#apply-custom-sogo-theme" title="Permanent link">&para;</a></h2>
 <p>mailcow builds after 28 January 2021 can change SOGo's theme by editing <code>data/conf/sogo/custom-theme.js</code>.
-Please check the AngularJS Material <a href="https://material.angularjs.org/latest/Theming/01_introduction">intro</a> and <a href="https://material.angularjs.org/latest/Theming/03_configuring_a_theme">documentation</a> as well as the <a href="https://material.io/archive/guidelines/style/color.html#color-color-palette">material style guideline</a> to learn how this works.
-After you updated said file you need to restart SOGo and Memcached containers by executing <code>docker-compose restart memcached-mailcow sogo-mailcow</code>.</p>
+Please check the AngularJS Material <a href="https://material.angularjs.org/latest/Theming/01_introduction">intro</a> and <a href="https://material.angularjs.org/latest/Theming/03_configuring_a_theme">documentation</a> as well as the <a href="https://material.io/archive/guidelines/style/color.html#color-color-palette">material style guideline</a> to learn how this works. </p>
+<p>You can use the provided <code>custom-theme.js</code> as an example starting point by removing the comments.
+After you modified <code>data/conf/sogo/custom-theme.js</code> and made changes to your new SOGo theme you need to </p>
+<ul>
+<li>edit <code>data/conf/sogo/sogo.conf</code> and append/set <code>SOGoUIxDebugEnabled = YES;</code></li>
+<li>restart SOGo and Memcached containers by executing <code>docker-compose restart memcached-mailcow sogo-mailcow</code>.</li>
+</ul>
 <h2 id="reset-to-sogo-default-theme">Reset to SOGo default theme<a class="headerlink" href="#reset-to-sogo-default-theme" title="Permanent link">&para;</a></h2>
 <p>Checkout <code>data/conf/sogo/custom-theme.js</code> by executing <code>git fetch ; git checkout origin/master data/conf/sogo/custom-theme.js data/conf/sogo/custom-theme.js</code>
 Find in <code>data/conf/sogo/custom-theme.js</code>:
@@ -1970,9 +1990,9 @@ Find in <code>data/conf/sogo/custom-theme.js</code>:
         &#39;hue-3&#39;: &#39;A700&#39;
       })
       .accentPalette(&#39;green&#39;, {
-        &#39;default&#39;: &#39;600&#39;,  // background color of fab buttons
+        &#39;default&#39;: &#39;600&#39;,  // background color of fab buttons and login screen
         &#39;hue-1&#39;: &#39;300&#39;,    // background color of center list toolbar
-        &#39;hue-2&#39;: &#39;300&#39;,
+        &#39;hue-2&#39;: &#39;300&#39;,    // highlight color for selected mail and current day calendar
         &#39;hue-3&#39;: &#39;A700&#39;
       })
       .backgroundPalette(&#39;frost-grey&#39;);
@@ -2103,7 +2123,7 @@ After you replaced said file you need to restart SOGo and Memcached containers b
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
         <script src="../clients.js"></script>
       
